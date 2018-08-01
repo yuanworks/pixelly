@@ -19,7 +19,7 @@ class ToolbarColorPicker extends Component {
   handleBackColorClick() {
    let color;
     
-    if ((color = prompt("Backcolor?", this.props.foreColor )))
+    if ((color = prompt("Backcolor?", this.props.backColor )))
       this.props.onChangeBackColor(color);
   }
 
