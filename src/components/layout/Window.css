@@ -1,0 +1,38 @@
+.Window {
+  background-color: #404040;
+  box-shadow: 1px 1px 2px 1px #00000033;
+  color: white;
+  position: absolute;
+  z-index: 100;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+}
+
+.Window-title {
+  background-color: black;
+  width: 100%;
+  min-height: 20px;
+  padding: 4px;
+  text-transform: uppercase;
+  color: gray;
+  font-size: 10px;
+  font-weight: bold;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.Window-is-closed {
+  display: none;
+}
+
+.Window-close {
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  margin-top: -1px;
+}
+
+.Window-content {
+  padding: 6px;
+}

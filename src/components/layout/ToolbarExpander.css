@@ -1,0 +1,13 @@
+.ToolbarExpander {
+  width: 100%;
+  text-align: right;
+}
+
+.ToolbarExpander-icon {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.ToolbarExpander-icon:hover {
+  opacity: 1;
+}

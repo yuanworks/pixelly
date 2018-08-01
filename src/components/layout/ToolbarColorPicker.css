@@ -1,0 +1,37 @@
+.ToolbarColorPicker {
+  width: 100%;
+  display: grid;
+  /*
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  */
+  margin-top: 6px;
+}
+
+.ToolbarColorPicker-color-container {
+  padding: 1px;
+  border: 1px solid #ffffff8a;
+  background-color: #404040;
+  box-shadow: 1px 1px 2px #0a0a0ab0;
+}
+
+.ToolbarColorPicker-color-front {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.ToolbarColorPicker-color-back {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+}
+
+.ToolbarColorPicker-color:before{
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.ToolbarColorPicker-color {
+  background-color: red;
+}
+

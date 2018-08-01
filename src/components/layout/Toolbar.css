@@ -1,0 +1,20 @@
+.Toolbar {
+  background-color: #404040;
+  box-shadow: 1px 1px 2px 1px #00000033;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px;
+  padding-bottom: 6px;
+  position: absolute;
+  transition: width 0.5s;
+  user-select: none;
+  width: 80px;
+  z-index: 100;
+}
+
+.Toolbar-drag {
+  background-color: #948e8e;
+  height: 6px;
+  width: 100%;
+}
