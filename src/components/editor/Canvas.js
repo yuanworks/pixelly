@@ -100,10 +100,18 @@ class Canvas extends Component {
           color = this.props.backColor;
           break;
       }
-  
+ 
       this.canvasContext.fillStyle = color;
       this.canvasContext.fillRect(0, 0, this.canvasRef.current.width, this.canvasRef.current.height);
-      console.log(this.canvasContext);
+    }
+
+    else if (this.props.tool === 'picker') {
+      const imgData = this.canvasContext.getImageData(e.nativeEvent.offsetX, e.nativeEvent.offsetY, 1, 1);
+      const red = imgData.data[0];
+      const green = imgData.data[1];
+      const blue = imgData.data[2];
+      const alpha = imgData.data[3];
+      console.log(red + " " + green + " " + blue + " " + alpha);
     }
 
     return false;
