@@ -1,8 +1,6 @@
 .ToolbarButton {
   height: auto;
-  /*color: #c1c1c1;*/
   padding: 6px;
-  /*width: 50%; <-- set by the toolbar*/
   border: 1px solid transparent;
 }
 
