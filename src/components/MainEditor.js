@@ -6,6 +6,7 @@ import BrushesToolbarButton from '../containers/BrushesToolbarButton';
 
 import { Tools } from '../actions';
 import InteractiveBoard from '../containers/InteractiveBoard';
+import MainToolbar from './layout/MainToolbar';
 
 class MainEditor extends Component {
   
@@ -44,6 +45,8 @@ class MainEditor extends Component {
     return (
       <div className="MainEditor">
         
+        <MainToolbar />
+
         <Toolbar handleToolChange={this.handleToolChange} foreColor={this.state.foreColor} backColor={this.state.backColor}
           onChangeForeColor={this.changeForeColor} onChangeBackColor={this.changeBackColor} >
           <BrushesToolbarButton tool={ Tools.PENCIL } />

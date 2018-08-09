@@ -158,6 +158,8 @@ class Canvas extends Component {
       case 'eraser':
         this.pencilDraw(this.canvasContext, e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.strokeWidth, true);
         break;
+
+      default:
     }
   }
 
