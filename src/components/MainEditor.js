@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import ToolbarButton from './layout/ToolbarButton';
 import Toolbar from './layout/Toolbar';
 import Artboard from './editor/Artboard';
 import Window from './layout/Window';
 import BrushesToolbarButton from '../containers/BrushesToolbarButton';
 
 import { Tools } from '../actions';
+import InteractiveBoard from '../containers/InteractiveBoard';
 
 class MainEditor extends Component {
   
@@ -47,18 +47,17 @@ class MainEditor extends Component {
         
         <Toolbar handleToolChange={this.handleToolChange} foreColor={this.state.foreColor} backColor={this.state.backColor}
           onChangeForeColor={this.changeForeColor} onChangeBackColor={this.changeBackColor} >
-          <ToolbarButton tool='pencil' />
-          <ToolbarButton tool='eraser' />
-          <ToolbarButton tool='fill' />
-          <ToolbarButton tool='selector' />
-          <ToolbarButton tool='picker' />
+          <BrushesToolbarButton tool={ Tools.PENCIL } />
           <BrushesToolbarButton tool={ Tools.ERASER } />
+          <BrushesToolbarButton tool={ Tools.FILL } />
+          <BrushesToolbarButton tool={ Tools.SELECTOR } />
+          <BrushesToolbarButton tool={ Tools.PICKER } />
         </Toolbar>
 
         <Window title='Preview' defaultVisible='true' />
         
-        <Artboard tool={this.state.selectedTool} foreColor={this.state.foreColor} backColor={this.state.backColor} strokeWidth={this.state.strokeWidth} />
-
+        <InteractiveBoard foreColor={this.state.foreColor} backColor={this.state.backColor} strokeWidth={this.state.strokeWidth} />
+        
       </div>
     );
   }
