@@ -5,7 +5,10 @@ import rootReducer from './reducers';
 import MainEditor from './components/MainEditor';
 import './App.css';
 
-const store = createStore(rootReducer);
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 
 class App extends Component {
@@ -19,10 +22,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Testing store:
-/*
-console.log(store.getState());
-store.dispatch({type: 'SET_SELECTED_BRUSH', brush: 'picker'});
-console.log(store.getState());
-*/
