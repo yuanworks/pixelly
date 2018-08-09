@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Toolbar.css';
 import Draggable from 'react-draggable';
 import ToolbarExpander from './ToolbarExpander';
-import ToolbarColorPicker from './ToolbarColorPicker';
 import SelectedToolbarColorPicker from '../../containers/SelectedToolbarColorPicker';
 
 class Toolbar extends Component {
@@ -50,7 +49,6 @@ class Toolbar extends Component {
             })
           }
           <SelectedToolbarColorPicker />
-          <ToolbarColorPicker foreColor={this.props.foreColor} backColor={this.props.backColor} onChangeForeColor={this.props.onChangeForeColor} onChangeBackColor={this.props.onChangeBackColor} />
         </div>
       </Draggable>
     );
