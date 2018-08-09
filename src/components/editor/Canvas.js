@@ -112,10 +112,37 @@ class Canvas extends Component {
       const blue = imgData.data[2];
       const alpha = imgData.data[3];
       console.log(red + " " + green + " " + blue + " " + alpha);
+
+      const hexColor = this.rgbToHex(red,green,blue);
+
+      switch (e.button) {
+        case 0: // left
+        default:
+          this.props.onChangeForeColor(hexColor);
+          break;
+        
+        case 2: // right
+        this.props.onChangeBackColor(hexColor);
+          break;
+      }
     }
 
     return false;
   }
+
+  rgbToHex(r,g,b) {
+    return "#" + this.colorToHex(r) + this.colorToHex(g) + this.colorToHex(b);
+  }
+
+  colorToHex(color) { 
+    let hex = Number(color).toString(16);
+    
+    if (hex.length < 2) {
+      hex = "0" + hex;
+    }
+
+    return hex;
+  };
 
   handleMouseMove(e) {
 
@@ -125,7 +152,6 @@ class Canvas extends Component {
     switch (this.props.tool) {
       
       case 'pencil':
-      default:
         this.pencilDraw(this.canvasContext, e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.strokeWidth);
         break;
 
