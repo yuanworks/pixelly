@@ -55,7 +55,7 @@ class MainEditor extends Component {
 
         <Window title='Preview' defaultVisible='true' />
         
-        <InteractiveBoard foreColor={this.state.foreColor} backColor={this.state.backColor} strokeWidth={this.state.strokeWidth} />
+        <InteractiveBoard strokeWidth={this.state.strokeWidth} />
         
       </div>
     );
