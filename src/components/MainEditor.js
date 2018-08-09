@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Toolbar from './layout/Toolbar';
-import Artboard from './editor/Artboard';
 import Window from './layout/Window';
 import BrushesToolbarButton from '../containers/BrushesToolbarButton';
 
