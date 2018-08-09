@@ -1,9 +1,9 @@
-export const setSelectedBrush = brush => ({
-  type: 'SET_SELECTED_BRUSH',
-  brush
+export const setSelectedTool = tool => ({
+  type: 'SET_SELECTED_TOOL',
+  tool
 });
 
-export const Brushes = {
+export const Tools = {
   PENCIL: 'pencil',
   ERASER: 'eraser',
   PICKER: 'picker',

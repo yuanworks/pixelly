@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import selectedBrush from './selectedBrush';
+import selectedTool from './selectedTool';
 
 export default combineReducers({
-  selectedBrush
+  selectedTool
 });
