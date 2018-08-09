@@ -4,6 +4,9 @@ import ToolbarButton from './layout/ToolbarButton';
 import Toolbar from './layout/Toolbar';
 import Artboard from './editor/Artboard';
 import Window from './layout/Window';
+import BrushesToolbarButton from '../containers/BrushesToolbarButton';
+
+import { Tools } from '../actions';
 
 class MainEditor extends Component {
   
@@ -49,6 +52,7 @@ class MainEditor extends Component {
           <ToolbarButton tool='fill' />
           <ToolbarButton tool='selector' />
           <ToolbarButton tool='picker' />
+          <BrushesToolbarButton tool={ Tools.ERASER } />
         </Toolbar>
 
         <Window title='Preview' defaultVisible='true' />

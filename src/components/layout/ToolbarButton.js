@@ -12,13 +12,15 @@ class ToolbarButton extends Component {
 
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
+    /*this.handleClick = this.handleClick.bind(this);*/
     this.renderButton = this.renderButton.bind(this);
   }
 
+  /*
   handleClick() {
     this.props.handleSelectionChange(this.props.tool);
   }
+  */
 
   renderButton() {
     
@@ -45,7 +47,7 @@ class ToolbarButton extends Component {
 
   render() {
     return (
-        <div className={"ToolbarButton" + (this.props.selected? ' ToolbarButton-selected' : ' ')} onClick={this.handleClick} style={this.props.style}>
+        <div className={"ToolbarButton" + (this.props.selected? ' ToolbarButton-selected' : ' ')} onClick={this.props.onClick} style={this.props.style}>
           <img src={this.renderButton()} alt="Edit" draggable="false" />
         </div>
     );

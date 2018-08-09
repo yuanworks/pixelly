@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setSelectedToolbrush } from '../actions';
+import { setSelectedTool } from '../actions';
 import ToolbarButton from '../components/layout/ToolbarButton';
 
 const mapStateToProps = (state, ownProps) => ({
-  active: ownProps.tool === state.selectedTool
+  selected: ownProps.tool === state.selectedTool
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick: () => dispatch(setSelectedToolbrush(ownProps.tool))
+  onClick: () => dispatch(setSelectedTool(ownProps.tool))
 })
 
 export default connect(
