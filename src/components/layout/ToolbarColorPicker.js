@@ -11,7 +11,8 @@ class ToolbarColorPicker extends Component {
   }
   handleForeColorClick() {
     let color;
-
+    console.log(this.props);
+    
     if ((color = prompt("Forecolor?", this.props.foreColor )))
       this.props.onChangeForeColor(color);
   }

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { setSelectedTool } from '../actions';
+import { setForeColor } from '../actions';
 import ToolbarButton from '../components/layout/ToolbarButton';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -7,7 +7,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick: () => dispatch(setSelectedTool(ownProps.tool))
+  onClick: () => dispatch(setForeColor(ownProps.tool))
 })
 
 export default connect(
