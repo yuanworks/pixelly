@@ -8,6 +8,6 @@ const selectedBrush = (state = Brushes.PENCIL, action) => {
     default:
       return state;
   }
-}
+};
 
 export default selectedBrush;
