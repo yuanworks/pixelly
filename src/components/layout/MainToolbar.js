@@ -11,8 +11,10 @@ class MainToolbar extends Component {
   render() {
     return (
       <div className="MainToolbar">
-        <div style={{width: 100}}>
-          <Slider min={1} max={20} defaultValue={1} onAfterChange={log} handleStyle={{backgroundColor: '#404040', borderColor: '#e9e9e9'}} dotStyle={{color: '#fff'}} />
+        <div style={{display: "inline-block"}}>Border:</div>
+        <input className="MainToolbar-input" type="text" name="border-width" />
+        <div className="MainToolbar-slider">
+          <Slider min={1} max={20} defaultValue={1} onAfterChange={log} railStyle={{backgroundColor: '#948e8e'}} handleStyle={{backgroundColor: '#e9e9e9', borderColor: '#e9e9e9'}} dotStyle={{color: '#fff'}} />
         </div>
       </div>
     )

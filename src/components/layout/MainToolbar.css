@@ -1,4 +1,21 @@
 .MainToolbar {
+  color: #d2cece;
   background-color: #404040;
   padding: 10px;
+  font-size: 14px;
+}
+
+.MainToolbar-input {
+  display: inline-block;
+  width: 36px;
+  margin-left: 8px;
+  border: 1px solid black;
+  background-color: #e9e9e9;
+  padding: 2px;
+}
+
+.MainToolbar-slider {
+  display: inline-block;
+  width: 80px;
+  margin-left: 12px;
 }
