@@ -13,6 +13,11 @@ export const setBackColor = backColor => ({
   backColor
 })
 
+export const setToolWidth = (tool, width) => ({
+  type: 'SET_TOOL_WIDTH',
+  toolWidth: {tool, width},
+})
+
 export const Tools = {
   PENCIL: 'pencil',
   ERASER: 'eraser',
