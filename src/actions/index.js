@@ -13,9 +13,9 @@ export const setBackColor = backColor => ({
   backColor
 })
 
-export const setToolWidth = (tool, width) => ({
-  type: 'SET_TOOL_WIDTH',
-  toolWidth: {tool, width},
+export const setPencilWidth = width => ({
+  type: 'SET_PENCIL_WIDTH',
+  width
 })
 
 export const Tools = {
