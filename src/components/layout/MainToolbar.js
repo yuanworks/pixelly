@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import './MainToolbar.css';
-import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
 import PencilWidthWrapper from '../../containers/PencilWidthWrapper';
-
-function log(value) {
-  console.log(value);
-}
+import PencilWidthSlider from '../../containers/PencilWidthSlider';
 
 class MainToolbar extends Component {
   render() {
@@ -15,7 +11,7 @@ class MainToolbar extends Component {
         <div style={{display: "inline-block"}}>Border:</div>
         <PencilWidthWrapper />
         <div className="MainToolbar-slider">
-          <Slider min={1} max={20} defaultValue={1} onAfterChange={log} railStyle={{backgroundColor: '#948e8e'}} handleStyle={{backgroundColor: '#e9e9e9', borderColor: '#e9e9e9'}} dotStyle={{color: '#fff'}} />
+          <PencilWidthSlider  min={1} max={20} defaultValue={this.props.defaultValue} railStyle={{backgroundColor: '#948e8e'}} handleStyle={{backgroundColor: '#e9e9e9', borderColor: '#e9e9e9'}} dotStyle={{color: '#fff'}} />
         </div>
       </div>
     )
