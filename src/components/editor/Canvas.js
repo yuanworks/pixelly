@@ -78,7 +78,7 @@ class Canvas extends Component {
       this.canvasContext.fillRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.pencilWidth, this.props.pencilWidth);
     }
     else if (this.props.tool === 'eraser') {
-      this.canvasContext.clearRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.strokeWidth, this.props.strokeWidth);
+      this.canvasContext.clearRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.eraserWidth, this.props.eraserWidth);
     }
 
     this.setState({mouseIsDown: true, button: this.getMouseButton(e.button)});
@@ -156,7 +156,7 @@ class Canvas extends Component {
         break;
 
       case 'eraser':
-        this.pencilDraw(this.canvasContext, e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.strokeWidth, true);
+        this.pencilDraw(this.canvasContext, e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.eraserWidth, true);
         break;
 
       default:

@@ -6,28 +6,18 @@ import BrushesToolbarButton from '../containers/BrushesToolbarButton';
 
 import { Tools } from '../actions';
 import InteractiveBoard from '../containers/InteractiveBoard';
-import MainToolbar from './layout/MainToolbar';
+import MainToolbarContainer from '../containers/MainToolbarContainer';
 
 class MainEditor extends Component {
   
   constructor(props) {
     super(props);
 
-    this.state = this.getInitialState();
-
     this.handleToolChange = this.handleToolChange.bind(this);
     this.changeForeColor = this.changeForeColor.bind(this);
     this.changeBackColor = this.changeBackColor.bind(this);
   }
 
-  getInitialState() {
-    return {
-      selectedTool: 'pencil',
-      foreColor: 'red', /*'#000',*/
-      backColor: '#fff',
-      strokeWidth: 5
-    }
-  }
 
   handleToolChange(tool) {
     this.setState({selectedTool: tool});
@@ -45,9 +35,9 @@ class MainEditor extends Component {
     return (
       <div className="MainEditor">
         
-        <MainToolbar />
+        <MainToolbarContainer />
 
-        <Toolbar handleToolChange={this.handleToolChange} foreColor={this.state.foreColor} backColor={this.state.backColor}
+        <Toolbar handleToolChange={this.handleToolChange}
           onChangeForeColor={this.changeForeColor} onChangeBackColor={this.changeBackColor} >
           <BrushesToolbarButton tool={ Tools.PENCIL } />
           <BrushesToolbarButton tool={ Tools.ERASER } />
@@ -58,7 +48,7 @@ class MainEditor extends Component {
 
         <Window title='Preview' defaultVisible='true' />
         
-        <InteractiveBoard strokeWidth={this.state.strokeWidth} />
+        <InteractiveBoard />
         
       </div>
     );

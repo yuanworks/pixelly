@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
-import { setPencilWidth } from '../actions';
 import ToolbarInput from '../components/layout/ToolbarInput';
+import { toolWidth, setToolWidth } from '../actions/helpers';
 
 const mapStateToProps = (state, ownProps) => ({
-  value: state.pencilWidth
+  value: toolWidth(state)
 });
 
-const mapDispatchToProps = dispatch => ({
-  onChange: (e) => dispatch(setPencilWidth(e.target.value))
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onChange: (e) => dispatch(setToolWidth(ownProps.selectedTool, e.target.value))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ToolbarInput)

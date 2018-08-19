@@ -18,6 +18,16 @@ export const setPencilWidth = width => ({
   width
 })
 
+export const setEraserWidth = width => ({
+  type: 'SET_ERASER_WIDTH',
+  width
+})
+
+export const unknownToolWidth = width => ({
+  type: 'ERROR_UNKNOWN_WIDTH',
+  width
+})
+
 export const Tools = {
   PENCIL: 'pencil',
   ERASER: 'eraser',

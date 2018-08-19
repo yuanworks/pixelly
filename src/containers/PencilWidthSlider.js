@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
-import { setPencilWidth } from '../actions';
 import Slider from 'rc-slider/lib/Slider';
 import 'rc-slider/assets/index.css';
-
+import { toolWidth, setToolWidth } from './../actions/helpers';
 
 const mapStateToProps = (state, ownProps) => ({
-  value: state.pencilWidth
+  value: toolWidth(state),
+  defaultValue: toolWidth(state),
 });
 
-const mapDispatchToProps = dispatch => ({
-  onChange: (value) => dispatch(setPencilWidth(value))
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  onChange: (value) => dispatch(setToolWidth(ownProps.selectedTool, value))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Slider)

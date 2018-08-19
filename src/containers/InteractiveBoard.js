@@ -9,7 +9,8 @@ const mapStateToProps = state => ({
   tool: state.selectedTool,
   foreColor: state.foreColor,
   backColor: state.backColor,
-  pencilWidth: state.pencilWidth
+  pencilWidth: state.pencilWidth,
+  eraserWidth: state.eraserWidth
 });
 
 const mapDispatchToProps = dispatch => ({
