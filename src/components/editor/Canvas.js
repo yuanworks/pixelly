@@ -75,7 +75,7 @@ class Canvas extends Component {
     this.canvasContext.fillStyle = color;
     
     if (this.props.tool === 'pencil') {
-      this.canvasContext.fillRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.strokeWidth, this.props.strokeWidth);
+      this.canvasContext.fillRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.pencilWidth, this.props.pencilWidth);
     }
     else if (this.props.tool === 'eraser') {
       this.canvasContext.clearRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.strokeWidth, this.props.strokeWidth);
@@ -152,7 +152,7 @@ class Canvas extends Component {
     switch (this.props.tool) {
       
       case 'pencil':
-        this.pencilDraw(this.canvasContext, e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.strokeWidth);
+        this.pencilDraw(this.canvasContext, e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.pencilWidth);
         break;
 
       case 'eraser':

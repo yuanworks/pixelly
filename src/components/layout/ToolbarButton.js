@@ -40,7 +40,7 @@ class ToolbarButton extends Component {
 
   render() {
     return (
-        <div className={"ToolbarButton" + (this.props.selected? ' ToolbarButton-selected' : ' ')} onClick={this.props.onClick} style={this.props.style}>
+        <div className={"ToolbarButton" + (this.props.selected? ' ToolbarButton-selected' : ' ')} onClick={this.props.onClick} onTouchStart={this.props.onClick} style={this.props.style}>
           <img src={this.renderButton()} alt="Edit" draggable="false" />
         </div>
     );

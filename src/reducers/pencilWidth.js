@@ -1,6 +1,6 @@
 const pencilWidth = (state = 1, action) => {
   switch (action.type) {
-    case 'SET_TOOL_WIDTH':
+    case 'SET_PENCIL_WIDTH':
       return action.width;
     
     default:

@@ -8,7 +8,8 @@ import Artboard from '../components/editor/Artboard';
 const mapStateToProps = state => ({
   tool: state.selectedTool,
   foreColor: state.foreColor,
-  backColor: state.backColor
+  backColor: state.backColor,
+  pencilWidth: state.pencilWidth
 });
 
 const mapDispatchToProps = dispatch => ({
