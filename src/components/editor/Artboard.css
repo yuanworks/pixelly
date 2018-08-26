@@ -7,6 +7,9 @@
 
 .Artboard-canvas {
   box-shadow: 1px 1px 8px #00000080;
+  margin: 0px auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*
