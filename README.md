@@ -1,5 +1,5 @@
 # PIXELLY
-_~ A React Pixel Art Application ~_
+_A React Pixel Art Application_
 
 ### Getting Started
 
