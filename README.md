@@ -1,5 +1,5 @@
 # PIXELLY
-_A React Pixel Art Application_
+_A Pixel Art Web App made with React_
 
 ### Getting Started
 
@@ -11,5 +11,8 @@ _A React Pixel Art Application_
 
 ### To Do
 
-- Add color picker ([react-color](https://github.com/casesandberg/react-color/))
-- Write the documentation (this!)
+## Color Picker
+
+[x] Add color picker ([react-color](https://github.com/casesandberg/react-color/))
+[ ] Show inside viewport if toolbar is somewhere else
+[ ] Use a common "popup window" container for its location

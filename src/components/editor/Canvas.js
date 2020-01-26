@@ -61,15 +61,11 @@ class Canvas extends Component {
     
     let color;
 
-    switch (e.button) {
-      case 0: // left
-      default:
-        color = this.props.foreColor;
-        break;
-      
-      case 2: // right
-        color = this.props.backColor;
-        break;
+    if (e.ctrlKey || e.button === 2) {
+      color = this.props.backColor;
+    }
+    else if (e.button === 0) {
+      color = this.props.foreColor;
     }
 
     this.canvasContext.fillStyle = color;
@@ -90,15 +86,11 @@ class Canvas extends Component {
     if (this.props.tool === 'fill') {
       let color;
 
-      switch (e.button) {
-        case 0: // left
-        default:
-          color = this.props.foreColor;
-          break;
-        
-        case 2: // right
-          color = this.props.backColor;
-          break;
+      if (e.ctrlKey || e.button === 2) {
+        color = this.props.backColor;
+      }
+      else if (e.button === 0) {
+        color = this.props.foreColor;
       }
  
       this.canvasContext.fillStyle = color;

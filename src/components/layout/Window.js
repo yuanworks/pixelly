@@ -19,7 +19,7 @@ class Window extends Component {
   render() {
     return (
       <Draggable handle='.Window-title' bounds='body'>
-      <div className={"Window " + (!this.state.visible ? 'Window-is-closed' : '') }>
+      <div className={"Window " + (!this.state.visible ? 'Window-is-closed' : '') } style={{right: 10}}>
         <div className="Window-title">{this.props.title? this.props.title : ''}
           <span className="Window-close" onClick={this.handleClose}>&times;</span>
         </div>
