@@ -57,6 +57,19 @@ class Canvas extends Component {
     */
   }
 
+  penOffset(x, y, strokeWidth) {
+
+    if (strokeWidth === 1) {
+      return [ x, y ];
+    }
+    else {
+      return [
+        x - Math.floor(strokeWidth / 2),
+        y - Math.floor(strokeWidth / 2)
+      ];
+    }
+  }
+
   handleMouseDown(e) {
     
     let color;
@@ -71,10 +84,12 @@ class Canvas extends Component {
     this.canvasContext.fillStyle = color;
     
     if (this.props.tool === 'pencil') {
-      this.canvasContext.fillRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.pencilWidth, this.props.pencilWidth);
+      const [ offsetX, offsetY ] = this.penOffset(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.pencilWidth);
+      this.canvasContext.fillRect(offsetX, offsetY, this.props.pencilWidth, this.props.pencilWidth);
     }
     else if (this.props.tool === 'eraser') {
-      this.canvasContext.clearRect(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.eraserWidth, this.props.eraserWidth);
+      const [ offsetX, offsetY ] = this.penOffset(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.eraserWidth);
+      this.canvasContext.clearRect(offsetX, offsetY, this.props.eraserWidth, this.props.eraserWidth);
     }
 
     this.setState({mouseIsDown: true, button: this.getMouseButton(e.button)});
@@ -143,12 +158,15 @@ class Canvas extends Component {
 
     switch (this.props.tool) {
       
-      case 'pencil':
-        this.pencilDraw(this.canvasContext, e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.pencilWidth);
+      case 'pencil': {
+        const [ offsetX, offsetY ] = this.penOffset(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.pencilWidth);
+        this.pencilDraw(this.canvasContext, offsetX, offsetY, this.props.pencilWidth);
         break;
+      }
 
       case 'eraser':
-        this.pencilDraw(this.canvasContext, e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.eraserWidth, true);
+        const [ offsetX, offsetY ] = this.penOffset(e.nativeEvent.offsetX, e.nativeEvent.offsetY, this.props.eraserWidth);
+        this.pencilDraw(this.canvasContext, offsetX, offsetY, this.props.eraserWidth, true);
         break;
 
       default:

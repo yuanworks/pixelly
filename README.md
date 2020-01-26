@@ -13,6 +13,6 @@ _A Pixel Art Web App made with React_
 
 ## Color Picker
 
-[x] Add color picker ([react-color](https://github.com/casesandberg/react-color/))
-[ ] Show inside viewport if toolbar is somewhere else
-[ ] Use a common "popup window" container for its location
+- [x] Add color picker ([react-color](https://github.com/casesandberg/react-color/))
+- [ ] Show inside viewport if toolbar is somewhere else
+- [ ] Use a common "popup window" container for its location
