@@ -23,7 +23,7 @@ class Window extends Component {
         <div className="Window-title">{this.props.title? this.props.title : ''}
           <span className="Window-close" onClick={this.handleClose}>&times;</span>
         </div>
-        <div className="Window-content">CONTENT HODORa</div>
+        <div className="Window-content">CONTENT</div>
       </div>
       </Draggable>
     );
