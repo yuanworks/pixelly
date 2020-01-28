@@ -7,6 +7,7 @@ import eraser from './../../assets/icons/eraser.svg';
 import picker from './../../assets/icons/picker.svg';
 import selector from './../../assets/icons/selector.svg';
 import fill from './../../assets/icons/fill.svg';
+import zoom from '../../assets/icons/zoom.svg';
 
 class ToolbarButton extends Component {
 
@@ -32,6 +33,9 @@ class ToolbarButton extends Component {
 
       case 'fill':
         return fill;
+
+      case 'zoom':
+        return zoom;
 
       default:
         return "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";

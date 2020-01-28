@@ -39,7 +39,7 @@ class Toolbar extends Component {
   render() {
     return (
       <Draggable handle='.Toolbar-drag' bounds='body'>
-        <div className="Toolbar" style={{ width: this.state.columns * this.state.iconSize + 8 }}>
+        <div className="Toolbar" style={{ width: this.state.columns * this.state.iconSize + 8, left: 10, top: 50 }}>
           <div className="Toolbar-drag"></div>
           <ToolbarExpander handleExpand={this.handleExpand} handleCollapse={this.handleCollapse} />
           {

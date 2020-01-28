@@ -29,11 +29,12 @@ export const unknownToolWidth = width => ({
 })
 
 export const Tools = {
-  PENCIL: 'pencil',
-  ERASER: 'eraser',
-  PICKER: 'picker',
-  SELECTOR: 'selector',
-  FILL: 'fill'
+  PENCIL   : 'pencil',
+  ERASER   : 'eraser',
+  PICKER   : 'picker',
+  SELECTOR : 'selector',
+  FILL     : 'fill',
+  ZOOM     : 'zoom',
 };
 
 export const Colors = {

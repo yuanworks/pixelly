@@ -44,6 +44,7 @@ class MainEditor extends Component {
           <BrushesToolbarButton tool={ Tools.FILL } />
           <BrushesToolbarButton tool={ Tools.SELECTOR } />
           <BrushesToolbarButton tool={ Tools.PICKER } />
+          <BrushesToolbarButton tool={Tools.ZOOM} />
         </Toolbar>
 
         <Window title='Preview' defaultVisible='true' />

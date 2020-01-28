@@ -8,8 +8,8 @@ class Artboard extends Component {
     return (
       <div className="Artboard">
         <div className="Artboard-canvas" style={{width: '800px', height: '600px', overflow: 'auto', position: 'relative'}}>
-          <Canvas width='1000' height='1000' {...this.props} zIndex='1' />
-          <Canvas width='1000' height='1000' {...this.props} bgLayer='true' zIndex='0' />
+          <Canvas width='800' height='600' {...this.props} zIndex='1' />
+          <Canvas width='800' height='600' {...this.props} bgLayer='true' zIndex='0' />
         </div>
       </div>
     )
